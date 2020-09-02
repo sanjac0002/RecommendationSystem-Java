@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class Rater {
     
-    private ArrayList<Rating> myRatings;
-    private String myID;
+    public ArrayList<Rating> myRatings;
+    public String myID;
     
     public Rater(String id)
     {
@@ -32,19 +32,36 @@ public class Rater {
     
     public double getRating(String item)
     {
+        double m=0.0;
         for(int k=0;k<myRatings.size();k++)
         {
-            if(myRatings.get(k).getItem().equals(item))//here k is a position in myRatings where we get Item declared in class Rating
+            if(myRatings.get(k).getItem().equals(item))//here k is a position in myRatings where we get Item declared in class
+                                                       // Rating. The getItem is the variable in class Rating.
             {
-                return myRatings.get(k).getValue();  // we return value declared in class Rating corresponding to item
-            }        
+                m= myRatings.get(k).getValue();  // we return value declared in class Rating corresponding to item.
+            } 
+            else
+            {
+                m= -1;
+            }
         
+        }
+        return m;
     }
-    }
-    public ArrayList numRatings()
+    public int numRatings()
     {
         int n=myRatings.size();
         return n;
+    }
+    
+    public ArrayList getItemsRated()
+    {
+        ArrayList<String> listofItems = new ArrayList<String>();
+        for(int i=0;i<myRatings.size();i++)
+        {
+            listofItems.add(myRatings.get(i).getItem());
+        }
+        return listofItems;
     }
     
 }

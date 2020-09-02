@@ -7,8 +7,8 @@
  */
 public class Rating {
     
-    private String item;
-    private double value;
+    public String item;
+    public double value;
     
     public Rating (String itm, double val)
     {
@@ -16,11 +16,11 @@ public class Rating {
         value=val;
     }
 
-    private String getItem()
+    public String getItem()
     {
         return(item);
     }
-    private double getValue()
+    public double getValue()
     {
         return(value);
     }
@@ -32,7 +32,7 @@ public class Rating {
     public String compareTo()
     {
         //compare this rating with another rating.
-        
+        return(" ");
     }
     
 }
