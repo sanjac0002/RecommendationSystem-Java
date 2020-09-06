@@ -6,10 +6,10 @@
  * @version (a version number or a date)
  */
 public class Movie {
-    private int yr,mins;
-    private String Id,ttl,gnr,dir,cnty,pstr;
+    public int yr,mins;
+    public String Id,ttl,gnr,dir,cnty,pstr;
     // Constructor for initializing the 8 private variable.
-    private Movie(String id,String title,int year,String genres,String director,String country,int minutes,String poster)
+    public Movie(String id,String title,int year,String genres,String director,String country,int minutes,String poster)
     {
         Id=id;
         ttl=title;
@@ -22,31 +22,31 @@ public class Movie {
     }
     
     //8 getter methods which returns the details about a movie.
-    private String getID()
+    public String getID()
     {
         return(Id);
     }
-    private String getTitle()
+    public String getTitle()
     {
         return(ttl);
     }
-    private int getYear()
+    public int getYear()
     {
         return(yr);
     }
-    private String getGenre()
+    public String getGenre()
     {
         return(gnr);
     }
-    private String getCountry()
+    public String getCountry()
     {
         return(cnty);
     }
-    private int getMinutes()
+    public int getMinutes()
     {
         return(mins);
     }
-    private String getPoster()
+    public String getPoster()
     {
         return(pstr);
     }
